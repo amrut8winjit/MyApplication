@@ -1,5 +1,6 @@
 package com.winjit.myapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    RecyclerView rclvwList = (RecyclerView)findViewById(R.id.xrclvwList);
+    RecyclerView rclvwList ;
     LinearLayoutManager layoutManager;
     private int previousTotal = 0;
     private boolean loading = true;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         layoutManager=new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
+        rclvwList= (RecyclerView)findViewById(R.id.xrclvwList);
         rclvwList.setLayoutManager(layoutManager);
 
         addItemsToList();
@@ -68,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+       // Intent intent=new Intent(MainActivity.this,MyActivity.class);
+       // startActivity(intent);
     }
 
     private void addItemsToList()
