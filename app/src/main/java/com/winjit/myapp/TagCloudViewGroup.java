@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
+import android.view.animation.ScaleAnimation;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,10 +47,24 @@ public class TagCloudViewGroup extends FrameLayout  implements GestureDetector.O
 
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(mContext,""+mTv.getText(),Toast.LENGTH_SHORT).show();
+                    setScaleAnimation(v);
+                    if (v instanceof TextView)
+                    {
+                        final TextView textView = (TextView) v;
+                        textView.setTextColor(Color.RED);
+                        textView.postDelayed(new Runnable()
+                        {
+                            @Override
+                            public void run()
+                            {
+                                Toast.makeText(mContext, textView.getText() + "", Toast.LENGTH_SHORT).show();
+                            }
+                        }, 500);
+                    }
+
                 }
             });
-            mTv.setTextColor(Color.BLACK);
+            mTv.setShadowLayer(3, 1, 1, Color.BLACK);
             this.addView(mTv, params);
         }
     }
@@ -81,7 +96,7 @@ public class TagCloudViewGroup extends FrameLayout  implements GestureDetector.O
                textView.setTextSize(textSize);
                //textView.setAlpha(alpha);
                setAlphaAnimation(textView,alpha/255);
-               //textView.setTextColor(Color.argb(255,color,color,color));
+               textView.setTextColor(Color.WHITE);
                LayoutParams params = (LayoutParams) textView.getLayoutParams();
                params.setMargins(left,top,0,0);
                textView.setLayoutParams(params);
@@ -110,6 +125,14 @@ public class TagCloudViewGroup extends FrameLayout  implements GestureDetector.O
         set.setFillAfter(true);
         view.setAnimation(set);
         set.start();
+    }
+    private void setScaleAnimation(View view)
+    {
+        // TODO Auto-generated method stub
+        ScaleAnimation scaleAnimation = new ScaleAnimation(1.0f, 5.0f, 1.0f, 5.0f, 50.0f, 50.0f);
+        scaleAnimation.setDuration(500);
+        scaleAnimation.setFillAfter(false);
+        view.startAnimation(scaleAnimation);
     }
 
     int changer = -2;

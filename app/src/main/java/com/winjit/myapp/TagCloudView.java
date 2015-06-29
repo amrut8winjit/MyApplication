@@ -14,7 +14,6 @@ import android.view.View;
  * Created by AmrutB on 25-06-2015.
  */
 public class TagCloudView extends View{
-    private String TAG = "TagCloudView";
     String[] tags = new String[]{"Lemon","Orange","Strawberry","Plum","Pear","Pineapple","Blackberry","Watermelon"};
     Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private float scroll = 0;
@@ -37,34 +36,14 @@ public class TagCloudView extends View{
             paint.setTextSize((r + z) / r/2 * 40 + 20);     // magic values, change to something better
             paint.setAlpha((int) ((r + z) / r/2 * 127 + 128));
             canvas.drawText(tags[i], getWidth() / 2, getHeight() / 2 + y, paint);
-            Log.d(TAG, "scroll=" + scroll + ";t=" + t + "; y=" + y + "; z=" + z + "; r=" + r + "; i=" + i);
         }
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                scroll=scroll+changer;
-                invalidate();
-            }
-        },500);
     }
-
-    int changer=50;
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (event.getAction() != MotionEvent.ACTION_DOWN) {
+        if (event.getAction() != MotionEvent.ACTION_DOWN)
             scroll -= event.getY() - prevY;     // only one plane
-
-            if (event.getY()!=prevY)
-                if (event.getY() - prevY>0) {
-                    changer = 0-Math.abs(changer);
-                } else {
-                    changer = Math.abs(changer);
-                }
-            Log.d(TAG,"prevY="+prevY+"; y="+event.getY()+"; changer="+changer);
-        }
         prevY = event.getY();
-
         invalidate();
         return true;
     }

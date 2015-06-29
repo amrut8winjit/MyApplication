@@ -6,6 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#AA000000"
     tools:context=".MainActivity">
 
     <TextView
@@ -17,7 +18,7 @@
     <com.winjit.myapp.TagCloudViewGroup
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/tcvg"
+        android:id="@+id/xTagCloudLayout"
         />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/xrclvwList"

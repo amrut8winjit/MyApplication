@@ -1,6 +1,7 @@
 package com.winjit.myapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,6 +10,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.winjit.myapp.tagcloud.SampleTagCloud;
+import com.winjit.myapp.view.TagCloudLayout;
+import com.winjit.myapp.view.TagView;
 
 import java.util.ArrayList;
 
@@ -22,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
     private int visibleThreshold = 5;
     RVListAdapter rvListAdapter;
     ArrayList<String> items=new ArrayList<String>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        layoutManager=new LinearLayoutManager(this);
+
+       /* layoutManager=new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
         rclvwList= (RecyclerView)findViewById(R.id.xrclvwList);
@@ -68,10 +73,11 @@ public class MainActivity extends AppCompatActivity {
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
             }
-        });
+        });*/
 
-       // Intent intent=new Intent(MainActivity.this,MyActivity.class);
-       // startActivity(intent);
+        Intent intent=new Intent(MainActivity.this,SampleTagCloud.class);
+        startActivity(intent);
+        finish();
     }
 
     private void addItemsToList()
