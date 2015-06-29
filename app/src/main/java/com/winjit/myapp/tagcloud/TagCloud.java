@@ -1,9 +1,7 @@
 package com.winjit.myapp.tagcloud;
 
 /**
- * Komodo Lab: Tagin! Project: 3D Tag Cloud Google Summer of Code 2011
- * 
- * @authors Reza Shiftehfar, Sara Khosravinasr and Jorge Silva
+ * Created by AmrutB on 25-06-2015.
  */
 import java.util.ArrayList;
 import java.util.Collections;

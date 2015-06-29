@@ -1,9 +1,7 @@
 package com.winjit.myapp.tagcloud;
 
 /**
- * Komodo Lab: Tagin! Project: 3D Tag Cloud Google Summer of Code 2011
- *
- * @authors Reza Shiftehfar, Sara Khosravinasr and Jorge Silva
+ * Created by AmrutB on 25-06-2015.
  */
 
 import java.util.ArrayList;
@@ -120,12 +118,14 @@ public class TagCloudView extends RelativeLayout {
 
     public void setTagCloudType(TagCloudType type) {
         tagCloudType = type;
-        handler.removeCallbacks(animatorBarrel);
         handler.removeCallbacks(animatorSpherical);
-        postInvalidate();
+        handler.removeCallbacks(animatorBarrel);
+
 
         if (tagCloudType == TagCloudType.SPHERE) {
             handler.post(animatorSpherical);
+        } else {
+            postInvalidate();
         }
     }
 
@@ -164,7 +164,7 @@ public class TagCloudView extends RelativeLayout {
             if (isAnimating) {
                 x = x + changerX;
                 y = y + changerY;
-                Log.d("TAG", "x=" + x + ";changerX=" + changerX + " y=" + y + "; changerY=" + changerY);
+                Log.d("TAG", "animatorSpherical x=" + x + ";changerX=" + changerX + " y=" + y + "; changerY=" + changerY);
                 updateViewSpherical(x, y, tspeed);
             }
         }
@@ -235,10 +235,10 @@ public class TagCloudView extends RelativeLayout {
                 LayoutParams params = (LayoutParams) textView.getLayoutParams();
                 params.setMargins(left, top, 0, 0);
                 //textView.setLayoutParams(params);
-                Log.d(TAG, "text=" + textView.getText() + "; z=" + z + "; scroll=" + scroll);
+                Log.d(TAG, "animatorBarrel text=" + textView.getText() + "; z=" + z + "; scroll=" + scroll);
             }
 
-            Log.d(TAG, "scroll=" + scroll + "; theta=" + theta + "; alpha=" + alpha + "; y=" + y + "; z=" + z + "; radius=" + radius + "; i=" + i);
+            Log.d(TAG, "animatorBarrel scroll=" + scroll + "; theta=" + theta + "; alpha=" + alpha + "; y=" + y + "; z=" + z + "; radius=" + radius + "; i=" + i);
             //view.layout(left, top, right, bottom);
         }
 
