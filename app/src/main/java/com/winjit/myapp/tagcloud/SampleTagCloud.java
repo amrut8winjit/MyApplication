@@ -4,27 +4,21 @@ package com.winjit.myapp.tagcloud;
  * Created by AmrutB on 25-06-2015.
  */
 
-import java.util.ArrayList;
-import java.util.List;
-
-
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Display;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.winjit.myapp.MyActivity;
 import com.winjit.myapp.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * SampleTagCloud class: this is a sample program to show how the 3D Tag Cloud can be used. It Creates the activity and sets the ContentView to our TagCloudView class
@@ -100,6 +94,9 @@ public class SampleTagCloud extends AppCompatActivity {
                 finish();
             }
         });
+
+        //Intent intent=new Intent(SampleTagCloud.this,MyActivity.class);
+        //startActivity(intent);
 
     }
     public void restoreActionBar(CharSequence mTitle)

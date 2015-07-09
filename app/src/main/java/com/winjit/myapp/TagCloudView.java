@@ -14,7 +14,7 @@ import android.view.View;
  * Created by AmrutB on 25-06-2015.
  */
 public class TagCloudView extends View{
-    String[] tags = new String[]{"Lemon","Orange","Strawberry","Plum","Pear","Pineapple","Blackberry","Watermelon"};
+    String[] tags = new String[]{"India","England","Australia","America","Africa","China","Japan","Switzerland","Malaysia"};
     Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private float scroll = 0;
     private float prevY;
@@ -27,7 +27,7 @@ public class TagCloudView extends View{
     public void draw(Canvas canvas) {
         super.draw(canvas);
         float r = getHeight() / 3;
-        paint.setColor(Color.BLACK);
+        paint.setColor(Color.WHITE);
         paint.setTextAlign(Paint.Align.CENTER);
         for (int i = 0; i < tags.length; i++) {
             float t = i + scroll / getHeight();
