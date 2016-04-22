@@ -147,24 +147,24 @@ public class SampleTagCloud extends AppCompatActivity {
         tempList.add(new Tag("Bing", 8, "www.bing.com"));
         tempList.add(new Tag("Wikipedia", 8, "www.wikipedia.com"));
         tempList.add(new Tag("Twitter", 8, "www.twitter.com"));
-        tempList.add(new Tag("Msn", 8, "www.msn.com"));
-        tempList.add(new Tag("Amazon", 8, "www.amazon.com"));
-        tempList.add(new Tag("Ebay", 8, "www.ebay.com"));
-        tempList.add(new Tag("LinkedIn", 8, "www.linkedin.com"));
-        tempList.add(new Tag("Live", 8, "www.live.com"));
-        tempList.add(new Tag("Microsoft", 8, "www.microsoft.com"));
-        tempList.add(new Tag("Flicker", 8, "www.flicker.com"));
-        tempList.add(new Tag("Apple", 8, "www.apple.com"));
-        tempList.add(new Tag("Paypal", 8, "www.paypal.com"));
+        //tempList.add(new Tag("Msn", 8, "www.msn.com"));
+//        tempList.add(new Tag("Amazon", 8, "www.amazon.com"));
+//        tempList.add(new Tag("Ebay", 8, "www.ebay.com"));
+//        tempList.add(new Tag("LinkedIn", 8, "www.linkedin.com"));
+//        tempList.add(new Tag("Live", 8, "www.live.com"));
+//        tempList.add(new Tag("Microsoft", 8, "www.microsoft.com"));
+//        tempList.add(new Tag("Flicker", 8, "www.flicker.com"));
+//        tempList.add(new Tag("Apple", 8, "www.apple.com"));
+//        tempList.add(new Tag("Paypal", 8, "www.paypal.com"));
         // tempList.add(new Tag("Craigslist", 7, "www.craigslist.com"));
-        tempList.add(new Tag("Imdb", 8, "www.imdb.com"));
-        tempList.add(new Tag("Ask", 8, "www.ask.com"));
+//        tempList.add(new Tag("Imdb", 8, "www.imdb.com"));
+//        tempList.add(new Tag("Ask", 8, "www.ask.com"));
         // tempList.add(new Tag("Weibo", 1, "www.weibo.com"));
-        tempList.add(new Tag("Tagin!", 8, "http://scyp.idrc.ocad.ca/projects/tagin"));
+//        tempList.add(new Tag("Tagin!", 8, "http://scyp.idrc.ocad.ca/projects/tagin"));
         // tempList.add(new Tag("Shiftehfar", 8, "www.shiftehfar.org"));
         // tempList.add(new Tag("Soso", 5, "www.google.com"));
         // tempList.add(new Tag("XVideos", 3, "www.xvideos.com"));
-        tempList.add(new Tag("BBC", 8, "www.bbc.co.uk"));
+//        tempList.add(new Tag("BBC", 8, "www.bbc.co.uk"));
         return tempList;
     }
 

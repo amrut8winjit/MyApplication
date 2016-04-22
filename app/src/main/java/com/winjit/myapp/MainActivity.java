@@ -1,19 +1,14 @@
 package com.winjit.myapp;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.winjit.myapp.tagcloud.SampleTagCloud;
-import com.winjit.myapp.view.TagCloudLayout;
-import com.winjit.myapp.view.TagView;
 
 import java.util.ArrayList;
 
